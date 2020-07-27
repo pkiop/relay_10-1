@@ -57,5 +57,9 @@
 
 
 ### 기타(비고)
-
+​
 http://www.ilovepc.co.kr/news/articleView.html?idxno=2780 
+​
+![ex_screenshot](https://cdn.clien.net/web/api/file/F01/2143451/9ae2c0b7b4c2497b850.JPG?w=780&h=30000)
+​
+![ex_screenshot](http://www.ilovepc.co.kr/news/photo/first/201007/img_2780_1.jpg)
