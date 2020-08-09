@@ -1,0 +1,40 @@
+const datas = [
+  {
+    no: 0,
+    gender: "M",
+    age: 3,
+    info: "이사람은 00한 사람입니다.",
+    start_date: "Fri Aug 07 2020 15:31:21 GMT+0900 (대한민국 표준시)",
+    end_date: "Fri Aug 07 2020 15:31:21 GMT+0900 (대한민국 표준시)",
+    place: "제주",
+    group_name: "11초등학교",
+    story: "00한 옛날 친구를 찾습니다!",
+    keyword: "긴머리,귤,축구",
+  },
+  {
+    no: 1,
+    gender: "M",
+    age: 12,
+    info: "이사람은 00한 사람입니다.",
+    start_date: "Fri Aug 07 2020 15:31:21 GMT+0900 (대한민국 표준시)",
+    end_date: "Fri Aug 07 2020 15:31:21 GMT+0900 (대한민국 표준시)",
+    place: "서울",
+    group_name: "11초등학교",
+    story: "00한 옛날 친구를 찾습니다!",
+    keyword: "짧은머리,귤,농구",
+  },
+  {
+    no: 3,
+    gender: "M",
+    age: 29,
+    info: "이사람은 00한 사람입니다.",
+    start_date: "Fri Aug 07 2020 15:31:21 GMT+0900 (대한민국 표준시)",
+    end_date: "Fri Aug 07 2020 15:31:21 GMT+0900 (대한민국 표준시)",
+    place: "제주",
+    group_name: "22초등학교",
+    story: "00한 옛날 친구를 찾습니다!",
+    keyword: "귤",
+  },
+]
+
+module.exports = datas
