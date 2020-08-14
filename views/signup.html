@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-
 <html>
    <head>
       <meta charset=UTF-8>
    </head>
    <body style="background: #F5E5C7;">
      <h1 style="width: 120px; margin: 100px auto 0 auto; color: #42648F;"> 가입하기</h1>
-     <div style="background: white; margin: 10px auto 150px auto;border: 2px solid black; padding: 20px; width: 300px; border-radius: 15px;">
+     <div style="background: white; margin: 10px auto 150px auto;border: none;box-shadow: 5px 2px 20px 0px; padding: 20px; width: 300px; border-radius: 15px;">
       <div>
        <div style="font-size: 25px; font-weight: bold; margin: 40px 0 20px 0; color: #42648F;">아이디</div>
         <input style="margin-left: 30px; height: 20px" id="id-input" type='text' placeholder="아이디를 입력 해주세요" />
@@ -30,6 +29,7 @@
             <label><input id="sex-female-radio" type="radio" name="sex" value="여자">여자</label>
           </div>
        </div>
+       <button style="margin: 50px 0 0 240px; font-weight: bold; border-radius: 5px; color: #42648F; background-color: white; border: 1px solid; font-size: 20px;"><a href="/signupnext">사진인증</a></button>
        <button style="margin: 50px 0 0 240px; font-weight: bold; border-radius: 5px; color: #42648F; background-color: white; border: 1px solid; font-size: 20px;" id="next-button">다음</button>
      </div>
      <script>
@@ -42,72 +42,59 @@
       const sex_male_radio = document.getElementById('sex-male-radio');
       const sex_female_radio = document.getElementById('sex-female-radio');
       const next_button = document.getElementById('next-button');
-
       let idValidation = false;
       let passwordValidation = false;
       let validId = null;
       let validPassword = null;
-
       id_check_button.addEventListener('click', () => {
         idValidation = true;
         validId = id_input.value;
         alert(id_input.value);
       });
-
       pw_check_button.addEventListener('click', () => {
         if (!pw_input1.value || !pw_input2.value) {
           alert('비밀번호를 입력해주세요');
           return;
         }
-
         if (pw_input1.value !== pw_input2.value) {
           alert('비밀번호가 서로 일치하지 않습니다. 다시 확인해주세요.');
           return;
         }
-
         passwordValidation = true;
         validPassword = pw_input1.value;
         alert('비밀번호가 일치합니다.');
       });
-
       next_button.addEventListener('click', () => {
         if (!idValidation) {
           alert('아이디 중복을 확인해주세요.');
           return;
         }
-
         if (!passwordValidation) {
           alert('비밀번호가 일치하는지 확인해주세요.');
           return;
         }
-
         if (validId !== id_input.value) {
           alert('아이디 중복을 다시 확인해주세요.');
           return;
         }
-
         if (pw_input1.value !== pw_input2.value || validPassword !== pw_input1.value) {
           alert('비밀번호 확인을 다시 해주세요.');
           return;
         }
-
         if (!name_input.value) {
           alert('이름을 입력해주세요.');
           return;
         }
-
         if (!sex_male_radio.checked && !sex_female_radio.checked) {
           alert('성별을 선택해주세요.');
           return;
         }
-
         const data = {
           id: id_input.value,
           pw: pw_input1.value,
           name: name_input.value,
           sex: sex_male_radio.checked ? '남자' : '여자'
         };
-
         alert(`아이디는 ${data.id}이고, 비밀번호는 ${data.pw}이고, 이름은 ${data.name}이고, 성별은 ${data.sex}입니다. 사진 업로드 페이지로 이동합니다.`);
       });
     </script>
