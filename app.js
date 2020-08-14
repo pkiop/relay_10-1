@@ -34,6 +34,14 @@ app.get('/login', (req, res) => {
   res.sendFile(getPath('/views/signin.html'))
 })
 
+app.get('/signup', (req, res) => {
+  res.sendFile(getPath('/views/signup.html'));
+})
+app.get('/signupnext', (req, res) => {
+  res.sendFile(getPath('/views/validateProfile.html'));
+})
+
+
 app.get('/posts', (req, res) => {
   res.sendFile(getPath('/views/search_post.html'));
 })
@@ -44,6 +52,7 @@ app.get('/posts/write', (req, res) => {
   }
   res.sendFile(getPath('/views/create_post.html'));
 })
+
 
 
 
