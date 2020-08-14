@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="/css/common.css" />
   </head>
   <body>
+   
     <nav
       class="navbar navbar-default"
       ,
@@ -71,12 +72,14 @@
       <section class="photo-upload-section">
         <div class="photo-upload-wrapper">
           <h3 class="photo-upload-text">프로필 사진</h3>
-          <div class="photo-upload-box">
+          <label for="profile" class="photo-upload-box" id="profile-label">
             <div>
             사진 업로드
           </div>
           </div>
         </div>
+
+        <input type="file" id="profile" accept="image/*"  class="none"/>
 
         <div class="photo-upload-wrapper">
           <h3 class="photo-upload-text">웹캠</h3>
@@ -97,5 +100,7 @@
       </div>
       </section>
     </main>
+    <script src="/js/validateProfile.js"></script>
+    <script src="/js/search_post.js"></script>
   </body>
 </html>
